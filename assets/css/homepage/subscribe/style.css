@@ -1,0 +1,115 @@
+.subscribe-banner {
+  border-radius: 2px;
+  border: 1px solid #FF5596;
+  overflow: hidden;
+
+  & .subscribe-banner__image {
+    height: 345px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .subscribe-disclaimer {
+    color: #FF5596;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    /* 12.6px */
+    text-transform: uppercase;
+    margin-top: 15px;
+
+    @media(max-width:600px) {
+      font-size: 14px;
+    }
+
+    & a {
+      color: #FF5596;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 90%;
+      text-transform: uppercase;
+    }
+
+    @media(max-width:600px) {
+      font-size: 14px;
+    }
+  }
+
+  & .subscribe-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    /* 12.6px */
+    text-transform: uppercase;
+    border-radius: 1px;
+    background-color: #FF5596;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    @media(max-width:600px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.harantie-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 28px;
+
+
+  & .harantie-info__image {
+    width: 80px;
+    height: 80px;
+    @media(max-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .harantie-info__text {
+    color: #000;
+    font-family: "Bebas Neue Pro";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    /* 12.6px */
+    text-transform: uppercase;
+
+    @media(max-width:600px) {
+      font-size: 14px;
+      max-width: 130px;
+    }
+    & b {
+      font-weight: 700;
+    }
+   
+  }
+}

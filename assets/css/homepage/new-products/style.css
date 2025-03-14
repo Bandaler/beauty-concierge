@@ -1,0 +1,6 @@
+.new-products__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+}
