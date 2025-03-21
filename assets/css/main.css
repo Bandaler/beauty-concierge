@@ -566,6 +566,7 @@ nav {
             line-height: 90%;
             text-transform: uppercase;
             max-width: 45px;
+
             @media(max-width: 600px) {
               font-size: 8px;
             }
@@ -612,6 +613,15 @@ nav {
           line-height: 90%;
           text-transform: uppercase;
           max-width: 84px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -moz-box;
+          -moz-box-orient: vertical;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          line-clamp: 2;
+          box-orient: vertical;
 
           @media(max-width:600px) {
             font-size: 14px;
@@ -641,6 +651,15 @@ nav {
         max-width: 180px;
         /* 12.6px */
         margin-top: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-clamp: 3;
+        box-orient: vertical;
 
         @media(max-width:600px) {
           font-size: 14px;
@@ -1344,7 +1363,7 @@ footer {
   margin-top: 20px;
   margin-bottom: 20px;
 
- 
+
 
   & a {
     color: #000;
@@ -1432,6 +1451,7 @@ footer {
       font-weight: 400;
       line-height: 90%;
       text-transform: uppercase;
+
       @media(max-width: 600px) {
         font-size: 12px;
       }

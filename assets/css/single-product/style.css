@@ -1,27 +1,44 @@
+.single-product__mainscreen {
+  margin-top: 20px;
+}
+
 .single-product__wrapper {
   display: flex;
   gap: 50px;
 
+  @media(max-width: 1150px) {
+    flex-direction: column;
+  }
+
   & .single-product__slider {
-    max-width: 500px;
+    max-width: 700px;
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
+
+    @media(max-width: 1150px) {
+      max-width: 100%;
+    }
   }
 
   & .main-slider {
-    
-    
+
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     & .splide__slide {
-      width: 500px;
+      max-width: 700px;
       width: 100%;
-      height: 500px;
+      height: 700px;
       border-radius: 5px;
       overflow: hidden;
+
+      @media(max-width: 600px) {
+        height: 286px;
+      }
+
       & img {
         object-fit: contain;
         width: 100%;
@@ -30,7 +47,7 @@
       }
     }
 
-   
+
   }
 
   & .single-product__slider-main {
@@ -38,7 +55,7 @@
 
     & .single-product__slider-thumb {
       position: absolute;
-      left: 0;
+      left: 10px;
       top: 50%;
       transform: translateY(-50%);
       z-index: 3;
@@ -51,12 +68,735 @@
       & .splide__slide {
         outline: none;
         border: none;
+        border-radius: 6.949px;
+        overflow: hidden;
+
         & img {
           object-fit: contain;
           width: 100%;
           height: 100%;
         }
       }
+    }
+  }
+}
+
+.custom-splide__arrow--prev {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.custom-splide__arrow--next {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.single-product__info-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  & .single-product__info-head__names {}
+
+  & .single-product__name {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    /* 18px */
+    text-transform: uppercase;
+
+    @media(max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+
+  & .single-product__sub-name {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    /* 18px */
+    text-transform: uppercase;
+
+    @media(max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+
+  & .single-product__price {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+
+    @media(max-width: 600px) {
+      font-size: 20px;
+    }
+
+    /* 18px */
+  }
+}
+
+.short-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  & span {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    /* 12.6px */
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+  & .btn-subscribe {}
+}
+
+.single-product__btns {
+  & .add-to__basket {
+    border-radius: 1px;
+    border: 1px solid #FF5596;
+    background: #FF5596;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: #FFF;
+    font-family: "Bebas Neue Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    max-width: 320px;
+    width: 100%;
+    text-transform: uppercase;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    @media(max-width:992px) {
+      max-width: 100%;
+    }
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+  & .sub-busket__info {
+    color: #FF5596;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+
+    /* 12.6px */
+  }
+
+  & .black-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+    width: 100%;
+    gap: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 1px;
+    border: 1px solid #000;
+    background: #000;
+    margin-bottom: 5px;
+    @media(max-width:992px) {
+      max-width: 100%;
+    }
+
+    & span {
+      color: #FFF;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 90%;
+      text-transform: uppercase;
+
+
+      @media(max-width: 600px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  & .single-product__availible {
+    color: #FF5596;
+    font-family: "Bebas Neue Pro";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.single-product__colors {
+  & .single-product__colors-title {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    margin-bottom: 10px;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+
+    /* 12.6px */
+  }
+
+  & .single-product__colors-items {
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+
+    @media(max-width: 600px) {
+      gap: 7px;
+    }
+
+    & .single-product__colors-item {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+
+      @media(max-width: 600px) {
+        width: 30px;
+        height: 30px;
+      }
+
+      & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      & .color-name {
+        display: none;
+      }
+
+      & .color-descr {
+        display: none;
+      }
+    }
+
+    & .single-product__colors-item.active {
+      border: 1px solid #FF5596;
+    }
+  }
+}
+
+.single-product__volume {
+  margin-top: 30px;
+
+  & .single-product__volume-title {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    /* 12.6px */
+    margin-bottom: 10px;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+  & .single-product__volume-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    & .single-product__volume-item {
+      border: 1px solid #000;
+      padding: 8px;
+      color: #000;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 90%;
+      cursor: pointer;
+      transition: all .3s;
+
+      @media(max-width: 600px) {
+        font-size: 14px;
+      }
+
+      /* 12.6px */
+    }
+
+    & .single-product__volume-item.active {
+      transition: all .3s;
+      color: #fff;
+      background-color: #FF5596;
+      border-color: #FF5596;
+    }
+  }
+}
+
+.single-product__chars-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 30px;
+
+  @media(max-width:992px) {
+    flex-direction: column;
+  }
+}
+
+.selected-color {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 0.415px solid #000;
+  padding: 4px;
+  margin-top: 15px;
+  max-width: fit-content;
+
+  & .selected-color__image {
+    width: 40px;
+    height: 40px;
+
+    @media(max-width: 600px) {
+      width: 17px;
+      height: 17px;
+    }
+
+    & img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .selected-color__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    & .selected-color__name {
+      color: #000;
+      font-family: "Bebas Neue Pro";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 90%;
+      /* 11.208px */
+      text-transform: uppercase;
+
+      @media(max-width: 600px) {
+        font-size: 12.453px;
+      }
+    }
+
+    & .selected-color__transcript {
+      color: #000;
+      font-family: "Bebas Neue Pro";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 90%;
+
+      /* 5.604px */
+      @media(max-width: 600px) {
+        font-size: 6.226px;
+      }
+    }
+  }
+}
+
+.single-product__descr-tabs__btns {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+
+  & .single-product__tab-btn {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+
+    /* 12.6px */
+  }
+
+  & .single-product__tab-btn.active {
+    text-decoration: underline;
+  }
+}
+
+
+.single-product__descr-tabs__content {
+  display: none;
+  padding-top: 10px;
+  color: #000;
+  font-family: "Bebas Neue Pro";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+
+  @media(max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+
+.single-product__descr-tabs__content.active {
+  display: block;
+}
+
+
+.single-product__reviews-items {
+  margin-top: 30px;
+
+  & .single-product__reviews-item__rating {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+
+    & .single-product-reviews__stars {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+
+      & .single-product-reviews__star {
+        width: 20px;
+        height: 19px;
+
+        @media(max-width: 600px) {
+          width: 16px;
+          height: 15px;
+        }
+
+        & img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    & .single-product-reviews__point {
+      color: #FF5596;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 90%;
+
+      @media(max-width: 600px) {
+        font-size: 16.34px;
+      }
+
+      /* 14.706px */
+    }
+  }
+
+
+}
+
+.single-product__reviews-tabs__btns {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+
+  & .single-product__reviews__tab-btn {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+  & .single-product__reviews__tab-btn.active {
+    text-decoration: underline;
+  }
+
+}
+
+
+
+.single-product__reviews-tabs__content {
+  display: none;
+  padding-top: 10px;
+  color: #000;
+  font-family: "Bebas Neue Pro";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+
+  @media(max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+.single-product__reviews-tabs__content.active {
+  display: block;
+}
+
+.single-product__review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.single-product__review {
+  border-radius: 5px;
+  border: 1px solid #FF5596;
+  padding: 10px;
+
+  & .single-product__review-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+
+    & .single-product__review-name {
+      display: flex;
+      flex-direction: column;
+      color: #000;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 90%;
+
+      @media(max-width: 600px) {
+        font-size: 14px;
+      }
+
+      /* 12.6px */
+
+      & .date {
+        color: #989898;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%;
+
+        @media(max-width: 600px) {
+          font-size: 8px;
+        }
+
+        /* 7.2px */
+      }
+    }
+  }
+
+  & .single-product__review-text {
+    color: #000;
+    font-family: "Bebas Neue Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    margin-bottom: 10px;
+
+    @media(max-width: 600px) {
+      font-size: 8px;
+    }
+
+    /* 7.2px */
+  }
+
+  & .single-product__review-images {
+    display: flex;
+    gap: 10px;
+
+    & img {
+      width: 81px;
+      height: 78px;
+      object-fit: cover;
+
+      @media(max-width: 600px) {
+        width: 27px;
+        height: 26px;
+      }
+    }
+  }
+}
+
+.review-form {
+  max-width: 500px;
+
+  & .input-wrap {
+    border-radius: 2.462px;
+    border: 0.224px solid #000;
+    background: #F2F2F2;
+    width: 100%;
+    height: 32px;
+    margin-bottom: 10px;
+
+    /* @media(max-width: 600px) {
+      height: 16px;
+    } */
+
+    & input {
+      padding-left: 5px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 90%;
+
+      /* @media(max-width: 600px) {
+        font-size: 8px;
+      } */
+
+      &::placeholder {
+        color: #A9A9A9;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%;
+
+        /* @media(max-width: 600px) {
+          font-size: 8px;
+        } */
+      }
+    }
+
+    & select {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+    }
+
+    & textarea {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      padding-left: 5px;
+      padding-top: 5px;
+    }
+  }
+
+  & .preview {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  & .preview .image-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  & .preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  & .preview .remove-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  & .input-wrap {
+    & .upload-file {
+      display: none;
+    }
+  }
+
+  & .file-upload-wrap {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    & label {
+      cursor: pointer;
+    }
+  }
+}
+
+.single-product__reviews-tabs__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+
+.all-reviews {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  & span {
+    color: #000;
+    font-family: "Bebas Neue Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    text-decoration: underline;
+    @media(max-width: 600px) {
+      font-size: 14px;
     }
   }
 }
