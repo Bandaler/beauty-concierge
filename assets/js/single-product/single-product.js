@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const colorItems = document.querySelectorAll(".single-product__colors-item");
+  const colorItems = document.querySelectorAll(".single-product__chars-item.image-char");
   const selectedImage = document.querySelector(".selected-color__image");
   const selectedName = document.querySelector(".selected-color__name");
   const selectedTranscript = document.querySelector(".selected-color__transcript");
@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const imageTag = item.querySelector("img").outerHTML;
-    const name = item.querySelector(".color-name").textContent.trim();
-    const transcript = item.querySelector(".color-descr").textContent.trim();
+    const name = item.querySelector(".chars-name").textContent.trim();
+    const transcript = item.querySelector(".chars-descr").textContent.trim();
 
 
     selectedImage.innerHTML = imageTag;
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const selectVolume = () => {
-  let items = document.querySelectorAll('.single-product__volume-item');
+  let items = document.querySelectorAll('.single-product__chars-item.simple-char');
 
   items.forEach(el => {
     el.addEventListener('click', function () {
