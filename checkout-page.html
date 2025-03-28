@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./assets/css/homepage/short-menu-links/style.css">
   <link rel="stylesheet" href="./assets/css/homepage/subscribe/style.css">
   <link rel="stylesheet" href="./assets/css/homepage/new-products/style.css">
+  <link rel="stylesheet" href="./assets/css/checkout/style.css">
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
@@ -559,7 +560,160 @@
     </nav>
   </header>
   <main>
-    
+    <section class="ckeckout-section">
+      <div class="container">
+        <div class="checkout-title">
+          Оформление заказа
+        </div>
+        <div class="checkout-subtitle">
+          Оставьте, пожалуйста, Ваши данные, а мы сделаем
+          всё возможное, чтобы процесс доставки Вашего заказа
+          был максимально комфортен для Вас
+        </div>
+        <div class="ckeckout-attention">
+          Пожалуйста, обратите внимание на сроки доставки
+        </div>
+        <div class="checkout-head">
+          <div class="checkout-head__row">
+            <div class="checkout-head__title">
+              ваш заказ
+            </div>
+            <div class="checkout-head__name">
+              анна краснова
+            </div>
+          </div>
+        </div>
+        <div class="checkout-body">
+          <div class="checkout-product__items">
+            <div class="checkout-product__item">
+              <div class="checkout-product__item-left">
+                <div class="checkout-product__item-image">
+                  <img src="./assets/img/checkout-i.png" alt="img">
+                </div>
+                <div class="checkout-product__item-info">
+                  <div class="checkout-product__item-name">
+                    HERMES
+                    ROSE HERMES SILKY BLUSH POWDER REFILL 
+                  </div>
+                  <div class="checkout-product__item-description">
+                    OTTEHOK HONEY
+                    SHIMMER & PERSIMMONE
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-product__item-right">
+                <div class="checkout-product__item-price">
+                  4 900 ₽
+                </div>
+                <div class="checkout-product__item-count">
+                  <div class="counter">
+                    <button id="decrement">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="999">
+                    <button id="increment">+</button>
+                </div>
+                </div>
+                <div class="checkout-item__char">
+                  <div class="checkout-item__char-name">
+                    50 мл
+                  </div>
+                </div>
+                <a href="javascript:void(0)" class="checkout-product__item-remove">
+                  Удалить
+                </a>
+              </div>
+            </div>
+            <div class="checkout-product__item">
+              <div class="checkout-product__item-left">
+                <div class="checkout-product__item-image">
+                  <img src="./assets/img/checkout-i.png" alt="img">
+                </div>
+                <div class="checkout-product__item-info">
+                  <div class="checkout-product__item-name">
+                    HERMES
+                    ROSE HERMES SILKY BLUSH POWDER REFILL 
+                  </div>
+                  <div class="checkout-product__item-description">
+                    OTTEHOK HONEY
+                    SHIMMER & PERSIMMONE
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-product__item-right">
+                <div class="checkout-product__item-price">
+                  4 900 ₽
+                </div>
+                <div class="checkout-product__item-count">
+                  <div class="counter">
+                    <button id="decrement">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="999">
+                    <button id="increment">+</button>
+                </div>
+                </div>
+                <div class="checkout-item__char">
+                  <div class="checkout-item__char-name">
+                    50 мл
+                  </div>
+                </div>
+                <a href="javascript:void(0)" class="checkout-product__item-remove">
+                  Удалить
+                </a>
+              </div>
+            </div>
+            <div class="checkout-product__item">
+              <div class="checkout-product__item-left">
+                <div class="checkout-product__item-image">
+                  <img src="./assets/img/checkout-i.png" alt="img">
+                </div>
+                <div class="checkout-product__item-info">
+                  <div class="checkout-product__item-name">
+                    HERMES
+                    ROSE HERMES SILKY BLUSH POWDER REFILL 
+                  </div>
+                  <div class="checkout-product__item-description">
+                    OTTEHOK HONEY
+                    SHIMMER & PERSIMMONE
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-product__item-right">
+                <div class="checkout-product__item-price">
+                  4 900 ₽
+                </div>
+                <div class="checkout-product__item-count">
+                  <div class="counter">
+                    <button id="decrement">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="999">
+                    <button id="increment">+</button>
+                </div>
+                </div>
+                <div class="checkout-item__char">
+                  <div class="checkout-item__char-name">
+                    50 мл
+                  </div>
+                </div>
+                <a href="javascript:void(0)" class="checkout-product__item-remove">
+                  Удалить
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-body__attention">
+            Внимание! Данного товара нет в наличии в Москве Срок доставки 3-4 недели.
+          </div>
+        </div>
+        <form class="checkout-form">
+          <div class="input-wrap promo-code">
+            <input type="text" placeholder="Введите промокод">
+          </div>
+          <div class="input-wrap">
+            <div class="label">
+              На вашем счету: 1 300 бьюти баллов 
+            </div>
+            <div class="switch" id="switcher"></div>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="overlay"></div>
@@ -653,6 +807,7 @@
   </footer>
   <script src="./assets/js/splide.min.js"></script>
   <script src="./assets/js/homepage/script.js"></script>
+  <script src="./assets/js/checkout/script.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 

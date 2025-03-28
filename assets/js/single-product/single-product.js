@@ -223,3 +223,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const overlay = document.querySelector(".overlay");
+
+
+  document.querySelectorAll("[data-modal]").forEach(button => {
+      button.addEventListener("click", function () {
+          const modalType = this.getAttribute("data-modal");
+          const modal = document.querySelector(`.modal[data-modal="${modalType}"]`);
+
+          if (modal) {
+              overlay.classList.add("active");
+              modal.classList.add("active");
+          }
+      });
+  });
+
+  function closeModal() {
+      document.querySelectorAll(".modal").forEach(modal => modal.classList.remove("active"));
+      overlay.classList.remove("active");
+  }
+
+ 
+  document.querySelectorAll(".modal-close").forEach(closeBtn => {
+      closeBtn.addEventListener("click", function (event) {
+          event.stopPropagation(); 
+          closeModal();
+      });
+  });
+
+
+  overlay.addEventListener("click", closeModal);
+
+ 
+  document.querySelectorAll(".modal").forEach(modal => {
+      modal.addEventListener("click", function (event) {
+          if (!event.target.closest(".modal-inner")) {
+              closeModal();
+          }
+      });
+  });
+});
+
+
+
