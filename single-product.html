@@ -698,7 +698,7 @@
                 <div class="sub-busket__info">
                   + Вам будет начислено 410 бьюти-баллов за эту покупку
                 </div>
-                <a href="javascript:void(0)" class="remembering-gift black-btn">
+                <a href="javascript:void(0)" class="remembering-gift black-btn" data-modal="add-gift">
                   <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <mask id="mask0_568_1321" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="13"
@@ -1331,6 +1331,85 @@
         </div>
         <div class="modal-content">
           here wil be content
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="add-gift">
+      <div class="modal-inner">
+        <div class="modal-close">
+          <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.11719L10.3092 12.879" stroke="black"></path>
+            <path d="M1.1543 12.7617L10.4635 0.99994" stroke="black"></path>
+          </svg>
+        </div>
+        <div class="modal-content">
+          <div class="gift_title">
+            намекнуть о подарке
+          </div>
+          <div class="gift-subtitle">
+            Слушай, я жить не могу без..
+          </div>
+          <div class="gift-card">
+            <div class="gift-card__image">
+              <img src="./assets/img/gk.png" alt="img">
+            </div>
+            <div class="gift-card__head">
+              <div class="gift-card__name">
+                <span class="gift-card__strong">
+                  glossier
+                </span>
+                Balm Dotcom
+              </div>
+              <div class="gift-card__price">
+                8 200 ₽
+              </div>
+            </div>
+            <div class="gift-card-description">
+              Увлажняющий блеск для губ
+            </div>
+          </div>
+          <div class="gift-form">
+            <form action="" class="black-inputs">
+              <div class="input-wrap">
+                <label for="name">Ваше имя</label>
+                <input type="name" placeholder="Имя">
+              </div>
+              <div class="input-wrap">
+                <label for="person">Кому намекаем?</label>
+                <input type="person" placeholder="Имя">
+              </div>
+              <div class="input-wrap">
+                <label for="person">Куда намекаем?</label>
+
+              </div>
+              <div class="input-row">
+                <div class="input-wrap">
+                  <input type="radio" id="test1" name="radio-group" checked>
+                  <label for="test1">отправить по почте</label>
+                </div>
+                <div class="input-wrap">
+                  <input type="radio" id="test2" name="radio-group">
+                  <label for="test2">отправить в What’s app</label>
+                </div>
+              </div>
+
+              <div class="radio-tab__content">
+                <div class="content content1 active">
+                  <div class="input-wrap">
+                    <label for="email">Почта</label>
+                    <input type="email" id="email" pattern=".+@example\.com" size="30" placeholder="support@xbeautyconcierge.ru" />
+                  </div>
+                </div>
+                <div class="content content2">
+                  <div class="input-wrap">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 (999) 990-60-96" />
+                  </div>
+                </div>
+              </div>
+              <input type="text" value="намекнуть" class="submit">
+            </form>
+          </div>
         </div>
       </div>
     </div>

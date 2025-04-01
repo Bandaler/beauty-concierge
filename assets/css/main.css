@@ -1313,6 +1313,7 @@ footer {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 13px;
 
@@ -1536,8 +1537,9 @@ footer {
     padding: 25px;
     min-height: 150px;
     position: relative;
-    max-width: 200px;
+    max-width: 400px;
     width: 100%;
+    padding-top: 50px;
 
     & .modal-close {
       position: absolute;
@@ -1558,6 +1560,8 @@ footer {
   opacity: 1;
   z-index: 12;
 }
+
+
 
 @font-face {
   font-family: 'Bebas Neue Pro Middle';
