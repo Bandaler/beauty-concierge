@@ -229,6 +229,7 @@
     border: 1px solid #000;
     background: #000;
     margin-bottom: 5px;
+
     @media(max-width:992px) {
       max-width: 100%;
     }
@@ -265,10 +266,11 @@
 }
 
 .single-product__chars {
- 
+
   &:not(:last-child) {
     margin-bottom: 30px;
   }
+
   & .single-product__chars-title {
     color: #000;
     font-size: 24px;
@@ -351,7 +353,7 @@
     & .single-product__chars-item.simple-char {
       border: 1px solid #000;
       padding: 8px;
-      
+
 
       & .chars-name {
         color: #000;
@@ -361,7 +363,7 @@
         line-height: 90%;
         cursor: pointer;
         transition: all .3s;
-  
+
         @media(max-width: 600px) {
           font-size: 14px;
         }
@@ -374,6 +376,7 @@
       transition: all .3s;
       background-color: #FF5596;
       border-color: #FF5596;
+
       & .chars-name {
         transition: all .3s;
         color: #fff;
@@ -675,19 +678,29 @@
   max-width: 500px;
 
   & .input-wrap {
-    border-radius: 2.462px;
-    border: 0.224px solid #000;
-    background: #F2F2F2;
-    width: 100%;
-    height: 32px;
+
     margin-bottom: 10px;
 
     /* @media(max-width: 600px) {
       height: 16px;
     } */
+    label {
+      color: #000;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 90%;
+
+      @media(max-width: 600px) {
+        font-size: 8px;
+      }
+
+      /* 7.2px */
+    }
 
     & input {
-      padding-left: 5px;
+      margin-top: 5px;
+      padding-left: 10px;
       display: block;
       width: 100%;
       height: 100%;
@@ -696,6 +709,11 @@
       font-style: normal;
       font-weight: 400;
       line-height: 90%;
+      border-radius: 2.462px;
+      border: 0.224px solid #000;
+      background: #F2F2F2;
+      width: 100%;
+      height: 32px;
 
       /* @media(max-width: 600px) {
         font-size: 8px;
@@ -720,6 +738,21 @@
       height: 100%;
       border: none;
       outline: none;
+      margin-top: 5px;
+      padding-left: 10px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 90%;
+      border-radius: 2.462px;
+      border: 0.224px solid #000;
+      background: #F2F2F2;
+      width: 100%;
+      height: 32px;
     }
 
     & textarea {
@@ -730,6 +763,44 @@
       outline: none;
       padding-left: 5px;
       padding-top: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+      border-radius: 2.462px;
+      border: 0.224px solid #000;
+
+      background: #F2F2F2;
+      height: 63px;
+      resize: none;
+      margin-top: 5px;
+    }
+
+
+  }
+
+
+  & .submit {
+    border-radius: 0.636px;
+    border: 0.636px solid #FF5596;
+    background: #FF5596;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 5px 8px;
+    color: #FFF;
+    font-family: "Bebas Neue Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 5px 35px;
+    /* 12.6px */
+    text-transform: uppercase;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
     }
   }
 
@@ -807,6 +878,7 @@
     font-weight: 700;
     line-height: 90%;
     text-decoration: underline;
+
     @media(max-width: 600px) {
       font-size: 14px;
     }
@@ -1069,6 +1141,7 @@ form.black-inputs {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+
     @media(max-width: 600px) {
       font-size: 9px;
     }
@@ -1082,4 +1155,156 @@ form.black-inputs {
 
 .radio-tab__content .content.active {
   display: block;
+}
+
+.notify-income__title {
+  color: #FF5596;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  /* 18px */
+  text-transform: uppercase;
+  margin-bottom: 23px;
+
+  @media(max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.notify-income__subtitle {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  /* 14.4px */
+  margin-bottom: 23px;
+  text-align: center;
+
+  @media(max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+& .notify-income__disclaimer {
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  /* 10.8px */
+  text-transform: uppercase;
+  margin-bottom: 23px;
+
+  @media(max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.notify-income__form {
+  & form {
+    & .input-wrap {
+
+      margin-bottom: 10px;
+
+      /* @media(max-width: 600px) {
+        height: 16px;
+      } */
+      label {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 90%;
+
+        @media(max-width: 600px) {
+          font-size: 8px;
+        }
+
+        /* 7.2px */
+      }
+
+      & input {
+        margin-top: 5px;
+        padding-left: 10px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%;
+        border-radius: 2.462px;
+        border: 0.224px solid #000;
+        background: #F2F2F2;
+        width: 100%;
+        height: 32px;
+
+        /* @media(max-width: 600px) {
+          font-size: 8px;
+        } */
+
+        &::placeholder {
+          color: #A9A9A9;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 90%;
+
+          /* @media(max-width: 600px) {
+            font-size: 8px;
+          } */
+        }
+      }
+
+      & select {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+      }
+
+      & textarea {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding-left: 5px;
+        padding-top: 5px;
+      }
+
+
+    }
+  }
+
+  & .submit {
+    border-radius: 0.636px;
+    border: 0.636px solid #FF5596;
+    background: #FF5596;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 5px 8px;
+    color: #FFF;
+    font-family: "Bebas Neue Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    /* 12.6px */
+    text-transform: uppercase;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+  }
 }

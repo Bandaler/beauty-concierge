@@ -733,7 +733,7 @@
                 <div class="single-product__availible">
                   <span>Наличие: </span>3 шт в Москве
                 </div>
-                <a href="javascript:void(0)" class="notify-income black-btn">
+                <a href="javascript:void(0)" class="notify-income black-btn" data-modal="notify-income">
                   <span>
                     сообщить о поступлении в москве
                   </span>
@@ -1125,10 +1125,16 @@
               <div class="single-product__reviews-tabs__content" data-tab-content="2">
                 <form class="review-form">
                   <div class="input-wrap">
-                    <input type="text" placeholder="Имя">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" name="name" id="name" placeholder="Имя">
                   </div>
                   <div class="input-wrap">
-                    <select name="" id="">
+                    <label for="name">Почта</label>
+                    <input type="email" name="email" id="email" pattern=".+@example\.com" size="30" placeholder="support@xbeautyconcierge.ru" />
+                  </div>
+                  <div class="input-wrap">
+                    <label for="points">Оценка</label>
+                    <select name="points" id="points">
                       <option value="1">1</option>
                       <option value="1.5">1.5</option>
                       <option value="2">2</option>
@@ -1140,8 +1146,12 @@
                       <option value="5">5</option>
                     </select>
                   </div>
-                  <div class="input-wrap">
-                    <textarea name="" id="" placeholder="Ваш отзыв"></textarea>
+                  <div class="input-wrap mt20" >
+                    <label for="review">Поделитесь мнением</label>
+                    <textarea name="review" id="review" placeholder="Поделитесь Вашими впечатлениями о продукте: Что понравилось?
+                    Что не понравилось? Порекомендуете ли Вы его подруге? 
+                    Мы будем особенно благодарны, если Вы дополните
+                    отзыв фотографиями Вашего заказа"></textarea>
                   </div>
 
 
@@ -1150,6 +1160,7 @@
                     <input type="file" class="upload-file" id="image-upload" multiple accept="image/*">
                     <div class="preview"></div>
                   </div>
+                  <input type="submit" class="submit" value="Отправить">
                 </form>
               </div>
             </div>
@@ -1397,17 +1408,59 @@
                 <div class="content content1 active">
                   <div class="input-wrap">
                     <label for="email">Почта</label>
-                    <input type="email" id="email" pattern=".+@example\.com" size="30" placeholder="support@xbeautyconcierge.ru" />
+                    <input type="email" id="email" pattern=".+@example\.com" size="30"
+                      placeholder="support@xbeautyconcierge.ru" />
                   </div>
                 </div>
                 <div class="content content2">
                   <div class="input-wrap">
                     <label for="phone">Номер телефона</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 (999) 990-60-96" />
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                      placeholder="+7 (999) 990-60-96" />
                   </div>
                 </div>
               </div>
               <input type="text" value="намекнуть" class="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="notify-income">
+      <div class="modal-inner">
+        <div class="modal-close">
+          <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.11719L10.3092 12.879" stroke="black"></path>
+            <path d="M1.1543 12.7617L10.4635 0.99994" stroke="black"></path>
+          </svg>
+        </div>
+        <div class="modal-content">
+          <div class="notify-income__title">
+            узнать о поступлении
+          </div>
+          <div class="notify-income__subtitle">
+            Введите Ваши данные и мы с радостью сообщим Вам, когда товар появится у нас в наличии в Москве
+          </div>
+          <div class="notify-income__disclaimer">
+            но Не забывайте Вы можете оформить заказ сейчас
+            и не ждать поступления в наличие
+          </div>
+          <div class="notify-income__form">
+            <form>
+              <div class="input-wrap">
+                <label for="name">Ваше имя</label>
+                <input type="text" placeholder="Имя ">
+              </div>
+              <div class="input-wrap">
+                <label for="email">Почта</label>
+                <input type="email" id="email" pattern=".+@example\.com" size="30"
+                  placeholder="support@xbeautyconcierge.ru" />
+              </div>
+              <div class="input-wrap">
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 (999) 990-60-96" />
+              </div>
+              <input type="submit" class="submit" value="подписаться на товар">
             </form>
           </div>
         </div>
