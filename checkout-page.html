@@ -593,7 +593,7 @@
                 <div class="checkout-product__item-info">
                   <div class="checkout-product__item-name">
                     HERMES
-                    ROSE HERMES SILKY BLUSH POWDER REFILL 
+                    ROSE HERMES SILKY BLUSH POWDER REFILL
                   </div>
                   <div class="checkout-product__item-description">
                     OTTEHOK HONEY
@@ -610,7 +610,7 @@
                     <button id="decrement">-</button>
                     <input type="number" id="quantity" value="1" min="1" max="999">
                     <button id="increment">+</button>
-                </div>
+                  </div>
                 </div>
                 <div class="checkout-item__char">
                   <div class="checkout-item__char-name">
@@ -630,7 +630,7 @@
                 <div class="checkout-product__item-info">
                   <div class="checkout-product__item-name">
                     HERMES
-                    ROSE HERMES SILKY BLUSH POWDER REFILL 
+                    ROSE HERMES SILKY BLUSH POWDER REFILL
                   </div>
                   <div class="checkout-product__item-description">
                     OTTEHOK HONEY
@@ -647,7 +647,7 @@
                     <button id="decrement">-</button>
                     <input type="number" id="quantity" value="1" min="1" max="999">
                     <button id="increment">+</button>
-                </div>
+                  </div>
                 </div>
                 <div class="checkout-item__char">
                   <div class="checkout-item__char-name">
@@ -667,7 +667,7 @@
                 <div class="checkout-product__item-info">
                   <div class="checkout-product__item-name">
                     HERMES
-                    ROSE HERMES SILKY BLUSH POWDER REFILL 
+                    ROSE HERMES SILKY BLUSH POWDER REFILL
                   </div>
                   <div class="checkout-product__item-description">
                     OTTEHOK HONEY
@@ -684,7 +684,7 @@
                     <button id="decrement">-</button>
                     <input type="number" id="quantity" value="1" min="1" max="999">
                     <button id="increment">+</button>
-                </div>
+                  </div>
                 </div>
                 <div class="checkout-item__char">
                   <div class="checkout-item__char-name">
@@ -705,11 +705,288 @@
           <div class="input-wrap promo-code">
             <input type="text" placeholder="Введите промокод">
           </div>
-          <div class="input-wrap">
+          <div class="switcher-title">
+            На вашем счету: 1 300 бьюти баллов
+          </div>
+          <div class="input-wrap switcher-wrap">
             <div class="label">
-              На вашем счету: 1 300 бьюти баллов 
+
+              Списать баллы
             </div>
             <div class="switch" id="switcher"></div>
+          </div>
+          <div class="total-checkout">
+            <div class="total-checkout__head">
+              <div class="total-checkout__title">
+                сумма вашего заказа без доставки
+              </div>
+              <div class="total-checkout__price">
+                4 900 ₽
+              </div>
+            </div>
+            <div class="total-checkout__points">
+              Вам будет начислено 1 300 бьюти баллов
+            </div>
+          </div>
+          <div class="checkout-form__title">
+            оформление
+          </div>
+          <div class="input-wrap">
+            <label for="name">Имя*</label>
+            <input name="name" type="text" placeholder="Анна" required>
+          </div>
+          <div class="input-wrap">
+            <label for="sirname">Фамилия*</label>
+            <input name="sirname" type="text" placeholder="Анна" required>
+          </div>
+          <div class="input-wrap">
+            <label for="phone">Номер телефона для связи в What’s App*</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="+7 999 990 60 96" required />
+          </div>
+          <div class="input-wrap">
+            <label for="courier">Номер для связи курьеру (если отличается)</label>
+            <input type="tel" id="phone" name="courier" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="+7 999 990 60 96" />
+          </div>
+          <div class="input-wrap">
+            <label for="email">Почта*</label>
+            <input name="email" type="email" id="email" pattern=".+@example\.com" size="30"
+              placeholder="support@xbeautyconcierge.ru" required />
+          </div>
+          <div class="input-wrap">
+            <input type="radio" name="package" id="sms" />
+            <label for="sms">Не звонить, только смс</label>
+          </div>
+          <div class="input-wrap">
+            <input type="radio" name="package" id="dismiss" />
+            <label for="dismiss">Отказаться от упаковки</label>
+          </div>
+          <div class="checkout-form__title" style="margin-top: 20px;">
+            Способ доставки
+          </div>
+          <div class="input-wrap">
+            <label for="city">Город</label>
+            <input type="search" name="city" id="city" placeholder="Город">
+            <div class="subinput">Россия, г. Москва</div>
+          </div>
+          <div class="input-wrap">
+            <input type="radio" name="delivery" id="sdek" checked/>
+            <label for="sdek">До пункта выдачи СДЭК <span>от 2 дней, от 435,5 р.</span></label>
+          </div>
+          <div class="input-wrap">
+            <input type="radio" name="delivery" id="pickup" />
+            <label for="pickup">Пункт самовывоза из нашего офиса <span>от 1 дня</span></label>
+          </div>
+          <div class="input-wrap">
+            <input type="radio" name="delivery" id="courier" />
+            <label for="courier">Курьер по Москве в пределах МКАД <span>от 2 дней, 500 р.</span></label>
+          </div>
+          <div class="input-wrap">
+            <input type="radio" name="delivery" id="door" />
+            <label for="door">Доставка СДЭК по России до Вашей двери <span>от 2 дней, от 625.5 р.</span></label>
+          </div>
+          <div class="input-wrap">
+            <input type="radio" name="delivery" id="yandex" />
+            <label for="yandex">Яндекс оплачивается отдельно по тарифу <span>от 1 дня</span></label>
+          </div>
+          <div class="variables-delivery__container">
+            <div class="export-point" data-container="sdek">
+              <div class="export-point__title">
+                Доставка в пункт выдачи сдЭк
+              </div>
+              <div class="input-wrap">
+                <label for="city">Выбрать пункт выдачи </label>
+                <input type="search" name="city" id="city" placeholder="Выберите пункт получения">
+              </div>
+            </div>
+            <div class="export-point" data-container="pickup">
+              <div class="export-point__title">
+                самовывоз из нашего шоурума
+              </div>
+              <p class="export-point__text" style="margin-bottom: 15px;">
+                Пункт получения
+              </p>
+              <p class="export-point__text">
+                Самовывоз<br/>
+                Адрес: м. Славянский бульвар, ул. Нежинская<br/>
+                Время работы: ежедневно с 10:00 до 20:00<br/>
+                Телефон: +7 (999) 990-60-96<br/>
+              </p>
+            </div>
+            <div class="export-point" data-container="courier">
+              <div class="export-point__title">
+                Доставка курьером до двери в пределах МКАД
+              </div>
+              <div class="input-wrap">
+                <label for="street">Улица </label>
+                <input type="text" name="street" id="street">
+              </div>
+              <div class="input-wrap">
+                <label for="home">Номер дома</label>
+                <input type="text" name="home" id="home" >
+              </div>
+              <div class="input-wrap">
+                <label for="liter">Корпус/строение/литера (если есть)</label>
+                <input type="text" name="liter" id="liter" >
+              </div>
+              <div class="input-wrap">
+                <label for="entrance">Подъезд </label>
+                <input type="text" name="entrance" id="entrance" >
+              </div>
+              <div class="input-wrap">
+                <label for="intercom">Домофон </label>
+                <input type="text" name="intercom" id="intercom" >
+              </div>
+              <div class="input-wrap">
+                <label for="floor">Этаж </label>
+                <input type="text" name="floor" id="floor" >
+              </div>
+              <div class="input-wrap">
+                <label for="apartment">Квартира </label>
+                <input type="text" name="apartment" id="apartment" >
+              </div>
+              <div class="form-disclaimer">
+                При доставке по Москве укажите
+                желательную дату и промежуток доставки
+                (минимум 2 часа)
+              </div>
+              <div class="input-wrap">
+                <label for="date">Дата </label>
+                <input type="text" name="date" id="date" >
+              </div>
+              <div class="input-wrap">
+                <label for="time">Время </label>
+                <input type="text" name="time" id="time" >
+              </div>
+              <div class="input-wrap">
+                <label for="comment">Комментарий к доставке </label>
+                <input type="text" name="comment" id="comment" >
+              </div>
+            </div>
+            <div class="export-point" data-container="door">
+              <div class="export-point__title">
+                Доставка сдек до вашей двери
+              </div>
+              <div class="input-wrap">
+                <label for="street">Улица </label>
+                <input type="text" name="street" id="street">
+              </div>
+              <div class="input-wrap">
+                <label for="home">Номер дома</label>
+                <input type="text" name="home" id="home" >
+              </div>
+              <div class="input-wrap">
+                <label for="liter">Корпус/строение/литера (если есть)</label>
+                <input type="text" name="liter" id="liter" >
+              </div>
+              <div class="input-wrap">
+                <label for="entrance">Подъезд </label>
+                <input type="text" name="entrance" id="entrance" >
+              </div>
+              <div class="input-wrap">
+                <label for="intercom">Домофон </label>
+                <input type="text" name="intercom" id="intercom" >
+              </div>
+              <div class="input-wrap">
+                <label for="floor">Этаж </label>
+                <input type="text" name="floor" id="floor" >
+              </div>
+              <div class="input-wrap">
+                <label for="apartment">Квартира </label>
+                <input type="text" name="apartment" id="apartment" >
+              </div>
+            </div>
+            <div class="export-point" data-container="yandex">
+              <div class="export-point__title">
+                Доставка яндекс курьером по москве и за Мкад
+              </div>
+              <div class="form-disclaimer" style="color: #FF5596;">
+                При выборе опции доставки Яндекс такси наш менеджер свяжется с Вами в What’s App и согласует тариф доставки.   
+                Данный вид доставки плачивается отдельно Вами при получении по тарифу службы Яндекс.
+                
+                Введите, пожалуйста, ниже Ваши данные.
+              </div>
+              <div class="input-wrap">
+                <label for="street">Улица </label>
+                <input type="text" name="street" id="street">
+              </div>
+              <div class="input-wrap">
+                <label for="home">Номер дома</label>
+                <input type="text" name="home" id="home" >
+              </div>
+              <div class="input-wrap">
+                <label for="liter">Корпус/строение/литера (если есть)</label>
+                <input type="text" name="liter" id="liter" >
+              </div>
+              <div class="input-wrap">
+                <label for="entrance">Подъезд </label>
+                <input type="text" name="entrance" id="entrance" >
+              </div>
+              <div class="input-wrap">
+                <label for="intercom">Домофон </label>
+                <input type="text" name="intercom" id="intercom" >
+              </div>
+              <div class="input-wrap">
+                <label for="floor">Этаж </label>
+                <input type="text" name="floor" id="floor" >
+              </div>
+              <div class="input-wrap">
+                <label for="apartment">Квартира </label>
+                <input type="text" name="apartment" id="apartment" >
+              </div>
+            </div>
+          </div>
+
+          <div class="form-disclaimer">
+            Пожалуйста, имейте ввиду, что если вы оформили товар из категории "под заказ", то сроки доставки могут
+            отличаться
+
+            При доставке по Москве укажите
+            желательную дату и промежуток доставки
+            (минимум 2 часа)
+          </div>
+          <div class="total-chekout__bottom">
+            <div class="total-chekout__bottom-title">
+              Итого сумма вашего заказа
+            </div>
+            <div class="total-chekout__bottom-row">
+              <div class="total-chekout__bottom-name">
+                Стоимость товаров
+              </div>
+              <div class="total-chekout__bottom-price">
+                4 900 ₽
+              </div>
+            </div>
+            <div class="total-chekout__bottom-row">
+              <div class="total-chekout__bottom-name">
+                Скидка
+              </div>
+              <div class="total-chekout__bottom-price">
+                1 300 ₽
+              </div>
+            </div>
+            <div class="total-chekout__bottom-row">
+              <div class="total-chekout__bottom-name">
+                Доставка
+              </div>
+              <div class="total-chekout__bottom-price">
+                500 ₽
+              </div>
+            </div>
+            <div class="total-chekout__bottom-sum">
+              <div class="total-chekout__bottom-sum__title">
+                итого к оплате
+              </div>
+              <div class="total-chekout__bottom-sum__price">
+                4 900 ₽
+              </div>
+            </div>
+          </div>
+          <input type="submit" class="submit" value="перейти к оплате">
+          <div class="form-policy">
+            Нажимая на кнопку, Вы соглашаетесь с <a href="javascript:void(0)">Политикой
+              Конфидециальности</a> и <a href="javascript:void(0)">Публичной Офертой</a>.
           </div>
         </form>
       </div>

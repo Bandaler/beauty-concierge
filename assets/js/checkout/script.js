@@ -36,3 +36,31 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("switcher").addEventListener("click", function() {
   this.classList.toggle("active");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const radios = document.querySelectorAll('input[name="delivery"]');
+    const containers = document.querySelectorAll(".export-point");
+
+    function updateDeliveryView(selectedId) {
+      containers.forEach((container) => {
+        const containerId = container.getAttribute("data-container");
+        if (containerId === selectedId) {
+          container.style.display = "block";
+        } else {
+          container.style.display = "none";
+        }
+      });
+    }
+
+    // При загрузке страницы активировать выбранный radio
+    const checkedRadio = document.querySelector('input[name="delivery"]:checked');
+    if (checkedRadio) {
+      updateDeliveryView(checkedRadio.id);
+    }
+
+    radios.forEach((radio) => {
+      radio.addEventListener("change", () => {
+        updateDeliveryView(radio.id);
+      });
+    });
+  });
