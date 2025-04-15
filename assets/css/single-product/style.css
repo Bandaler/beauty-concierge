@@ -53,6 +53,13 @@
   & .single-product__slider-main {
     position: relative;
 
+    & .original-mark {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 3;
+    }
+
     & .single-product__slider-thumb {
       position: absolute;
       left: 10px;
@@ -478,6 +485,25 @@
   & .single-product__tab-btn.active {
     text-decoration: underline;
   }
+
+  & .single-product__tab-btn__size {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    text-transform: uppercase;
+
+    @media(max-width: 600px) {
+      font-size: 14px;
+    }
+
+    /* 12.6px */
+  }
+
+  & .single-product__tab-btn__size.active {
+    text-decoration: underline;
+  }
 }
 
 
@@ -494,10 +520,74 @@
   @media(max-width: 600px) {
     font-size: 14px;
   }
+
+  & .sizes-title {
+    color: #FF5596;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    /* 14.066px */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @media(max-width: 600px) {
+      font-size: 15px;
+    }
+  }
 }
 
 
 .single-product__descr-tabs__content.active {
+  display: block;
+}
+
+.single-product__descr-tabs__content-size {
+  display: none;
+  padding-top: 10px;
+  color: #000;
+  font-family: "Bebas Neue Pro";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+
+  @media(max-width: 600px) {
+    font-size: 14px;
+  }
+
+
+
+  & table {
+    border-collapse: collapse;
+    /* убирает промежутки между ячейками */
+    width: 100%;
+
+    & tr {
+      & td {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%;
+        /* 7.502px */
+        text-transform: uppercase;
+        padding: 8px;
+        border: 1px solid #FF5596;
+
+        @media(max-width: 600px) {
+          font-size: 8.336px;
+        }
+      }
+    }
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.single-product__descr-tabs__content-size.active {
   display: block;
 }
 
@@ -763,8 +853,8 @@
       outline: none;
       padding-left: 5px;
       padding-top: 5px;
-        padding-right: 5px;
-        padding-bottom: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
       border-radius: 2.462px;
       border: 0.224px solid #000;
 
@@ -1308,4 +1398,3 @@ form.black-inputs {
     }
   }
 }
-

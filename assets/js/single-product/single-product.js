@@ -188,6 +188,29 @@ const tabsReviews = () => {
 
 tabsReviews()
 
+const tabsSize = () => {
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".single-product__tab-btn__size");
+    const tabContents = document.querySelectorAll(".single-product__descr-tabs__content-size");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const tabId = this.getAttribute("data-tab");
+
+
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        tabContents.forEach(content => content.classList.remove("active"));
+
+
+        this.classList.add("active");
+        document.querySelector(`.single-product__descr-tabs__content-size[data-tab-content="${tabId}"]`).classList.add("active");
+      });
+    });
+  });
+
+}
+
+tabsSize()
 
 document.addEventListener("DOMContentLoaded", function () {
   const fileInput = document.getElementById("image-upload");

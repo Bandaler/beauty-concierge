@@ -600,6 +600,11 @@ nav {
 
     & .product-card__item-body {
       margin-top: 10px;
+      height: 230px;
+
+      @media(max-width: 920px) {
+        height: 150px;
+      }
 
       & .product-card__item-body__head {
         display: flex;
@@ -624,7 +629,7 @@ nav {
           -webkit-box-orient: vertical;
           line-clamp: 8;
           box-orient: vertical;
-          height: 180px;
+          
 
           & .product-card__item-name__brand {
             font-weight: 700;
@@ -637,7 +642,6 @@ nav {
           @media(max-width:600px) {
             font-size: 14px;
             max-width: 100px;
-            height: 110px;
           }
         }
 
@@ -819,6 +823,28 @@ nav {
         width: 100%;
         padding-top: 7px;
         padding-bottom: 7px;
+        border: 1px solid #000;
+
+        @media(max-width:600px) {
+          font-size: 14px;
+        }
+      }
+      & .product-item__detail {
+        color: #000;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 90%;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 5px;
 
         @media(max-width:600px) {
           font-size: 14px;
