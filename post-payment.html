@@ -13,9 +13,11 @@
   <link rel="stylesheet" href="./assets/css/homepage/short-menu-links/style.css">
   <link rel="stylesheet" href="./assets/css/homepage/subscribe/style.css">
   <link rel="stylesheet" href="./assets/css/homepage/new-products/style.css">
-  
+
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/dashboard/style.css">
+  <link rel="stylesheet" href="./assets/css/dashboard-edit/style.css">
+  <link rel="stylesheet" href="./assets/css/post-payment/style.css">
 </head>
 
 <body>
@@ -570,542 +572,383 @@
     </div>
     <section class="section">
       <div class="container">
-        <div class="dashboard-head">
-          <div class="dashboard-head__left">
-            <div class="user-name">
-              Анна
-              Краснова
-            </div>
-            <div class="user-points">
-              ВАши бьюти баллы:
-              <span class="user-points__num">
-                456
-              </span>
-            </div>
-
-          </div>
-          <div class="dashboard-head__right">
-            <a href="mailto:xbeautyconcierge@mail.ru" class="user-contact">
-              xbeautyconcierge@mail.ru
-            </a>
-            <a href="tel:+ 7 (999) 990-60-96" class="user-contact">
-              7 (999) 990-60-96
-            </a>
-            <span class="user-contact">
-              Адрес доставки:<br />
-              г. Москва, Ул. Нежинская 9
-            </span>
-            <a href="javascript:void(0)" class="user-contact" id="add-address">
-              добавить адрес
-            </a>
-            <a href="javascript:void(0)" class="user-contact edit-btn" id="edit-btn">
-              Редактировать данные
-            </a>
-          </div>
+        <div class="post-payment__title">
+          анна, Спасибо за ваш заказ!
         </div>
-        <div class="user-points__description">
-          За каждый заказ на Ваш счёт начисляется 5% кешбэка бьюти баллами от суммы заказа без учёта доставки (на
-          следующий календарный день после оформления заказа). 
-
-          Вы можете оплатить ими до 100% от суммы следующего заказа!
+        <div class="post-payment__subtitle">
+          Ваш заказ № 123456 успешно оформлен.В ближайшее время наш менеджер свяжется с Вами в What’s App для
+          подтверждения заказа.
         </div>
-        <div class="dashboard__tabs">
-          <div class="dashboard__tabs__btns">
-            <a href="javascript:void(0)" class="dashboard__tab-btn active" data-tab="1">история заказов</a>
-            <a href="javascript:void(0)" class="dashboard__tab-btn" data-tab="2">вишлист</a>
-            <a href="javascript:void(0)" class="dashboard__tab-btn" data-tab="3">Бонусы</a>
-          </div>
-          <div class="dashboard__tabs__content active" data-tab-content="1">
-            <div class="orders-history">
-              <a href="javascript:void(0)" class="orders-history__wa">
-                Уточнить статус заказа у менеджера в What’s App
-              </a>
-              <div class="orders-history__items">
-                <div class="orders-history__item">
-                  <div class="orders-history__item-num">
-                    заказ 56782
-                  </div>
-                  <div class="orders-history__item-row">
-                    <div class="orders-history__item-title orders-date">
-                      От 26 октября
-                    </div>
-                    <div class="orders-history__item-title orders-ingrid">
-                      Состав заказа
-                      <span>
-                        Rhode lip
-                        Rare RareRareRareRare
-                      </span>
-                    </div>
-                    <div class="orders-history__item-title orders-sum">
-                      сумма
-                      <span>
-                        24 500 руб
-                      </span>
-                    </div>
-                  </div>
-                  <a href="javascript:void(0)" class="orders-history__item-link">
-                    Подробнее
-                  </a>
-                </div>
-                <div class="orders-history__item">
-                  <div class="orders-history__item-num">
-                    заказ 56782
-                  </div>
-                  <div class="orders-history__item-row">
-                    <div class="orders-history__item-title orders-date">
-                      От 26 октября
-                    </div>
-                    <div class="orders-history__item-title orders-ingrid">
-                      Состав заказа
-                      <span>
-                        Rhode lip
-                        Rare RareRareRareRare
-                      </span>
-                    </div>
-                    <div class="orders-history__item-title orders-sum">
-                      сумма
-                      <span>
-                        24 500 руб
-                      </span>
-                    </div>
-                  </div>
-                  <a href="javascript:void(0)" class="orders-history__item-link">
-                    Подробнее
-                  </a>
-                </div>
-                <div class="orders-history__item">
-                  <div class="orders-history__item-num">
-                    заказ 56782
-                  </div>
-                  <div class="orders-history__item-row">
-                    <div class="orders-history__item-title orders-date">
-                      От 26 октября
-                    </div>
-                    <div class="orders-history__item-title orders-ingrid">
-                      Состав заказа
-                      <span>
-                        Rhode lip
-                        Rare RareRareRareRare
-                      </span>
-                    </div>
-                    <div class="orders-history__item-title orders-sum">
-                      сумма
-                      <span>
-                        24 500 руб
-                      </span>
-                    </div>
-                  </div>
-                  <a href="javascript:void(0)" class="orders-history__item-link">
-                    Подробнее
-                  </a>
-                </div>
-              </div>
-              <div class="pagination">
-                <a href="javascript:void(0)" class="pagination-arrow__left">
-                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.85355 4.35355C8.04882 4.15829 8.04882 3.84171 7.85355 3.64645L4.67157 0.464466C4.47631 0.269204 4.15973 0.269204 3.96447 0.464466C3.7692 0.659728 3.7692 0.976311 3.96447 1.17157L6.79289 4L3.96447 6.82843C3.7692 7.02369 3.7692 7.34027 3.96447 7.53553C4.15973 7.7308 4.47631 7.7308 4.67157 7.53553L7.85355 4.35355ZM0.5 4.5H7.5V3.5H0.5V4.5Z"
-                      fill="black"></path>
-                  </svg>
-                </a>
-                <a href="javascript:void(0)" class="current">
-                  1
-                </a>
-                <a href="javascript:void(0)">
-                  2
-                </a>
-                <a href="javascript:void(0)">
-                  3
-                </a>
-                <a href="javascript:void(0)">
-                  4
-                </a>
-                <a href="javascript:void(0)">
-                  5
-                </a>
-                <a href="javascript:void(0)" class="pagination-arrow__right">
-                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.85355 4.35355C8.04882 4.15829 8.04882 3.84171 7.85355 3.64645L4.67157 0.464466C4.47631 0.269204 4.15973 0.269204 3.96447 0.464466C3.7692 0.659728 3.7692 0.976311 3.96447 1.17157L6.79289 4L3.96447 6.82843C3.7692 7.02369 3.7692 7.34027 3.96447 7.53553C4.15973 7.7308 4.47631 7.7308 4.67157 7.53553L7.85355 4.35355ZM0.5 4.5H7.5V3.5H0.5V4.5Z"
-                      fill="black"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="dashboard__tabs__content" data-tab-content="2">
-            <a href="javascript:void(0)" class="btn-share" data-modal="share-wishlist">
-              <span>
-                поделиться виш-листом
-              </span>
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="path-1-inside-1_668_5167" fill="white">
-                  <path
-                    d="M12.2695 10.5674C12.2695 11.6621 11.3818 12.5495 10.2871 12.5498H2.52148C1.4267 12.5497 0.539062 11.6622 0.539062 10.5674V6.4375H1.2002V10.5674C1.2002 11.2972 1.79167 11.8895 2.52148 11.8896H10.2871C11.0168 11.8894 11.6084 11.2972 11.6084 10.5674V6.4375H12.2695V10.5674Z" />
-                </mask>
-                <path
-                  d="M12.2695 10.5674C12.2695 11.6621 11.3818 12.5495 10.2871 12.5498H2.52148C1.4267 12.5497 0.539062 11.6622 0.539062 10.5674V6.4375H1.2002V10.5674C1.2002 11.2972 1.79167 11.8895 2.52148 11.8896H10.2871C11.0168 11.8894 11.6084 11.2972 11.6084 10.5674V6.4375H12.2695V10.5674Z"
-                  fill="black" />
-                <path
-                  d="M10.2871 12.5498V13.2106H10.2873L10.2871 12.5498ZM2.52148 12.5498L2.52139 13.2106H2.52148V12.5498ZM0.539062 6.4375V5.77666H-0.121776V6.4375H0.539062ZM1.2002 6.4375H1.86103V5.77666H1.2002V6.4375ZM2.52148 11.8896L2.52135 12.5505H2.52148V11.8896ZM10.2871 11.8896V12.5505H10.2873L10.2871 11.8896ZM11.6084 6.4375V5.77666H10.9476V6.4375H11.6084ZM12.2695 6.4375H12.9304V5.77666H12.2695V6.4375ZM11.6087 10.5674C11.6087 11.297 11.017 11.8888 10.287 11.889L10.2873 13.2106C11.7466 13.2103 12.9304 12.0273 12.9304 10.5674H11.6087ZM10.2871 11.889H2.52148V13.2106H10.2871V11.889ZM2.52158 11.889C1.7916 11.8889 1.1999 11.2971 1.1999 10.5674H-0.121776C-0.121776 12.0273 1.0618 13.2104 2.52139 13.2106L2.52158 11.889ZM1.1999 10.5674V6.4375H-0.121776V10.5674H1.1999ZM0.539062 7.09834H1.2002V5.77666H0.539062V7.09834ZM0.539357 6.4375V10.5674H1.86103V6.4375H0.539357ZM0.539357 10.5674C0.539357 11.6617 1.42617 12.5503 2.52135 12.5505L2.52162 11.2288C2.15717 11.2287 1.86103 10.9328 1.86103 10.5674H0.539357ZM2.52148 12.5505H10.2871V11.2288H2.52148V12.5505ZM10.2873 12.5505C11.3823 12.5501 12.2692 11.6617 12.2692 10.5674H10.9476C10.9476 10.9326 10.6514 11.2287 10.2869 11.2288L10.2873 12.5505ZM12.2692 10.5674V6.4375H10.9476V10.5674H12.2692ZM11.6084 7.09834H12.2695V5.77666H11.6084V7.09834ZM11.6087 6.4375V10.5674H12.9304V6.4375H11.6087Z"
-                  fill="white" mask="url(#path-1-inside-1_668_5167)" />
-                <path d="M6.32075 8.50303V1.31641M6.32075 1.31641L4.00781 3.79455M6.32075 1.31641L8.79889 3.79455"
-                  stroke="white" stroke-width="0.660839" />
-              </svg>
-            </a>
-            <div class="product-card__items">
-              <div class="product-card__item" onclick="window.location='javascript:void(0)'">
-                <div class="product-card__item-image">
-                  <img src="./assets/img/p1.png" alt="img">
-                </div>
-                <div class="product-card__item-info">
-                  <div class="product-card__item-body">
-                    <div class="product-card__item-body__head">
-                      <div class="product-card__item-name">
-                        <div class="product-card__item-name__brand">
-                          HAUS LABS
-                          BY LADY GAGA
-                        </div>
-                        <div class="product-card__item-name__name">
-                          PHD HYBRID
-                          PLUMPING LIP GLAZE DUO
-                        </div>
-                        <div class="product-card__item-name__color">
-                          <strong>OTTEHOK</strong> HONEY
-                          SHIMMER &amp; PERSIMMONE
-                        </div>
-                      </div>
-                      <div class="product-card__item-price">
-                        от 4 900 ₽
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__item-footer">
-                    <div class="product-card__item-cat">
-                      Бальзам для губ
-                    </div>
-                    <a href="javascript:void(0)" class="product-item__addCart pink-mode__btn">
-                      в корзину
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              <div class="product-card__item" onclick="window.location='javascript:void(0)'">
-                <div class="product-card__item-image">
-                  <img src="./assets/img/p1.png" alt="img">
-                </div>
-                <div class="product-card__item-info">
-                  <div class="product-card__item-body">
-                    <div class="product-card__item-body__head">
-                      <div class="product-card__item-name">
-                        <div class="product-card__item-name__brand">
-                          HAUS LABS
-                          BY LADY GAGA
-                        </div>
-                        <div class="product-card__item-name__name">
-                          PHD HYBRID
-                          PLUMPING LIP GLAZE DUO
-                        </div>
-                        <div class="product-card__item-name__color">
-                          <strong>OTTEHOK</strong> HONEY
-                          SHIMMER &amp; PERSIMMONE
-                        </div>
-                      </div>
-                      <div class="product-card__item-price">
-                        от 4 900 ₽
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__item-footer">
-                    <div class="product-card__item-cat">
-                      Бальзам для губ
-                    </div>
-                    <a href="javascript:void(0)" class="product-item__addCart pink-mode__btn">
-                      в корзину
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              <div class="product-card__item" onclick="window.location='javascript:void(0)'">
-                <div class="product-card__item-image">
-                  <img src="./assets/img/p1.png" alt="img">
-                </div>
-                <div class="product-card__item-info">
-                  <div class="product-card__item-body">
-                    <div class="product-card__item-body__head">
-                      <div class="product-card__item-name">
-                        <div class="product-card__item-name__brand">
-                          HAUS LABS
-                          BY LADY GAGA
-                        </div>
-                        <div class="product-card__item-name__name">
-                          PHD HYBRID
-                          PLUMPING LIP GLAZE DUO
-                        </div>
-                        <div class="product-card__item-name__color">
-                          <strong>OTTEHOK</strong> HONEY
-                          SHIMMER &amp; PERSIMMONE
-                        </div>
-                      </div>
-                      <div class="product-card__item-price">
-                        от 4 900 ₽
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__item-footer">
-                    <div class="product-card__item-cat">
-                      Бальзам для губ
-                    </div>
-                    <a href="javascript:void(0)" class="product-item__addCart pink-mode__btn">
-                      в корзину
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-              <div class="product-card__item" onclick="window.location='javascript:void(0)'">
-                <div class="product-card__item-image">
-                  <img src="./assets/img/p1.png" alt="img">
-                </div>
-                <div class="product-card__item-info">
-                  <div class="product-card__item-body">
-                    <div class="product-card__item-body__head">
-                      <div class="product-card__item-name">
-                        <div class="product-card__item-name__brand">
-                          HAUS LABS
-                          BY LADY GAGA
-                        </div>
-                        <div class="product-card__item-name__name">
-                          PHD HYBRID
-                          PLUMPING LIP GLAZE DUO
-                        </div>
-                        <div class="product-card__item-name__color">
-                          <strong>OTTEHOK</strong> HONEY
-                          SHIMMER &amp; PERSIMMONE
-                        </div>
-                      </div>
-                      <div class="product-card__item-price">
-                        от 4 900 ₽
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-card__item-footer">
-                    <div class="product-card__item-cat">
-                      Бальзам для губ
-                    </div>
-                    <a href="javascript:void(0)" class="product-item__addCart pink-mode__btn">
-                      в корзину
-                    </a>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pagination">
-              <a href="javascript:void(0)" class="pagination-arrow__left">
-                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.85355 4.35355C8.04882 4.15829 8.04882 3.84171 7.85355 3.64645L4.67157 0.464466C4.47631 0.269204 4.15973 0.269204 3.96447 0.464466C3.7692 0.659728 3.7692 0.976311 3.96447 1.17157L6.79289 4L3.96447 6.82843C3.7692 7.02369 3.7692 7.34027 3.96447 7.53553C4.15973 7.7308 4.47631 7.7308 4.67157 7.53553L7.85355 4.35355ZM0.5 4.5H7.5V3.5H0.5V4.5Z"
-                    fill="black"></path>
-                </svg>
-              </a>
-              <a href="javascript:void(0)" class="current">
-                1
-              </a>
-              <a href="javascript:void(0)">
-                2
-              </a>
-              <a href="javascript:void(0)">
-                3
-              </a>
-              <a href="javascript:void(0)">
-                4
-              </a>
-              <a href="javascript:void(0)">
-                5
-              </a>
-              <a href="javascript:void(0)" class="pagination-arrow__right">
-                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.85355 4.35355C8.04882 4.15829 8.04882 3.84171 7.85355 3.64645L4.67157 0.464466C4.47631 0.269204 4.15973 0.269204 3.96447 0.464466C3.7692 0.659728 3.7692 0.976311 3.96447 1.17157L6.79289 4L3.96447 6.82843C3.7692 7.02369 3.7692 7.34027 3.96447 7.53553C4.15973 7.7308 4.47631 7.7308 4.67157 7.53553L7.85355 4.35355ZM0.5 4.5H7.5V3.5H0.5V4.5Z"
-                    fill="black"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="dashboard__tabs__content" data-tab-content="3">
-            тут будет какая то инфа о бонусах
-          </div>
-        </div>
-        <div class="dashboard-bottom__links">
-          <a href="javascript:void(0)" class="dashboard-link">
-            Чат с менеджером
+        <div class="post-payment__btns">
+          <a href="javascript:void(0)">
+            вернуться на главную
           </a>
-          <a href="javascript:void(0)" class="dashboard-link">
-            Частые вопросы
-          </a>
-          <a href="javascript:void(0)" class="dashboard-link exit">
-            Выйти
+          <a href="javascript:void(0)">
+            перейти в личный кабинет
           </a>
         </div>
-
+      </div>
+    </section>
+    <section class="similar section">
+      <div class="container">
+        <div class="similar-title">
+          может ещё что-нибудь?
+        </div>
+        <div class="product-card__items">
+          <div class="product-card__item" onclick="window.location='javascript:void(0)'">
+            <div class="product-card__item-image">
+              <div class="product-card__item-cats">
+                <div class="product-card__item-cat">
+                  новинка
+                </div>
+                <div class="product-card__item-cat">
+                  на заказ 3-4 недели
+                </div>
+                <div class="product-card__item-cat">
+                  must have
+                </div>
+                <div class="product-card__item-cat">
+                  выбор анны
+                </div>
+              </div>
+              <div class="product-card__item-trand">
+                <div class="product-card__item-trand__inner">
+                  <img src="./assets/img/trand.svg" alt="img">
+                  <span>
+                    тренд тик тока
+                  </span>
+                </div>
+              </div>
+              <img src="./assets/img/p1.png" alt="img">
+            </div>
+            <div class="product-card__item-info">
+              <div class="product-card__item-body">
+                <div class="product-card__item-body__head">
+                  <div class="product-card__item-name">
+                    <div class="product-card__item-name__brand">
+                      HAUS LABS
+                      BY LADY GAGA
+                    </div>
+                    <div class="product-card__item-name__name">
+                      PHD HYBRID
+                      PLUMPING LIP GLAZE DUO
+                    </div>
+                    <div class="product-card__item-name__color">
+                      <strong>OTTEHOK</strong> HONEY
+                      SHIMMER & PERSIMMONE
+                    </div>
+                  </div>
+                  <div class="product-card__item-price">
+                    от 4 900 ₽
+                  </div>
+                </div>
+  
+                <div class="product-card__item-colors">
+                  <div class="product-card__item-colors__items">
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                  </div>
+                  <div class="product-card__item-colors__count">
+                    +2
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__item-footer">
+                <div class="product-card__item-cat">
+                  Бальзам для губ
+                </div>
+                <a href="javascript:void(0)" class="product-item__addCart">
+                  в корзину
+                </a>
+                <a href="javascript:void(0)" class="product-item__detail">
+                  подробнее
+                </a>
+                <div class="product-item__availibility">
+                  <span>Наличие: </span>3 шт в Москве
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card__item" onclick="window.location='javascript:void(0)'">
+            <div class="product-card__item-image">
+              <div class="product-card__item-cats">
+                <div class="product-card__item-cat">
+                  новинка
+                </div>
+                <div class="product-card__item-cat">
+                  на заказ 3-4 недели
+                </div>
+                <div class="product-card__item-cat">
+                  must have
+                </div>
+                <div class="product-card__item-cat">
+                  выбор анны
+                </div>
+              </div>
+              <div class="product-card__item-trand">
+                <div class="product-card__item-trand__inner">
+                  <img src="./assets/img/trand.svg" alt="img">
+                  <span>
+                    тренд тик тока
+                  </span>
+                </div>
+              </div>
+              <img src="./assets/img/p1.png" alt="img">
+            </div>
+            <div class="product-card__item-info">
+              <div class="product-card__item-body">
+                <div class="product-card__item-body__head">
+                  <div class="product-card__item-name">
+                    <div class="product-card__item-name__brand">
+                      HAUS LABS
+                      BY LADY GAGA
+                    </div>
+                    <div class="product-card__item-name__name">
+                      PHD HYBRID
+                      PLUMPING LIP GLAZE DUO
+                    </div>
+                    <div class="product-card__item-name__color">
+                      <strong>OTTEHOK</strong> HONEY
+                      SHIMMER & PERSIMMONE
+                    </div>
+                  </div>
+                  <div class="product-card__item-price">
+                    от 4 900 ₽
+                  </div>
+                </div>
+  
+                <div class="product-card__item-colors">
+                  <div class="product-card__item-colors__items">
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                  </div>
+                  <div class="product-card__item-colors__count">
+                    +2
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__item-footer">
+                <div class="product-card__item-cat">
+                  Бальзам для губ
+                </div>
+                <a href="javascript:void(0)" class="product-item__addCart">
+                  в корзину
+                </a>
+                <a href="javascript:void(0)" class="product-item__detail">
+                  подробнее
+                </a>
+                <div class="product-item__availibility">
+                  <span>Наличие: </span>3 шт в Москве
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card__item" onclick="window.location='javascript:void(0)'">
+            <div class="product-card__item-image">
+              <div class="product-card__item-cats">
+                <div class="product-card__item-cat">
+                  новинка
+                </div>
+                <div class="product-card__item-cat">
+                  на заказ 3-4 недели
+                </div>
+                <div class="product-card__item-cat">
+                  must have
+                </div>
+                <div class="product-card__item-cat">
+                  выбор анны
+                </div>
+              </div>
+              <div class="product-card__item-trand">
+                <div class="product-card__item-trand__inner">
+                  <img src="./assets/img/trand.svg" alt="img">
+                  <span>
+                    тренд тик тока
+                  </span>
+                </div>
+              </div>
+              <img src="./assets/img/p1.png" alt="img">
+            </div>
+            <div class="product-card__item-info">
+              <div class="product-card__item-body">
+                <div class="product-card__item-body__head">
+                  <div class="product-card__item-name">
+                    <div class="product-card__item-name__brand">
+                      HAUS LABS
+                      BY LADY GAGA
+                    </div>
+                    <div class="product-card__item-name__name">
+                      PHD HYBRID
+                      PLUMPING LIP GLAZE DUO
+                    </div>
+                    <div class="product-card__item-name__color">
+                      <strong>OTTEHOK</strong> HONEY
+                      SHIMMER & PERSIMMONE
+                    </div>
+                  </div>
+                  <div class="product-card__item-price">
+                    от 4 900 ₽
+                  </div>
+                </div>
+  
+                <div class="product-card__item-colors">
+                  <div class="product-card__item-colors__items">
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                  </div>
+                  <div class="product-card__item-colors__count">
+                    +2
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__item-footer">
+                <div class="product-card__item-cat">
+                  Бальзам для губ
+                </div>
+                <a href="javascript:void(0)" class="product-item__addCart">
+                  в корзину
+                </a>
+                <a href="javascript:void(0)" class="product-item__detail">
+                  подробнее
+                </a>
+                <div class="product-item__availibility">
+                  <span>Наличие: </span>3 шт в Москве
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card__item" onclick="window.location='javascript:void(0)'">
+            <div class="product-card__item-image">
+              <div class="product-card__item-cats">
+                <div class="product-card__item-cat">
+                  новинка
+                </div>
+                <div class="product-card__item-cat">
+                  на заказ 3-4 недели
+                </div>
+                <div class="product-card__item-cat">
+                  must have
+                </div>
+                <div class="product-card__item-cat">
+                  выбор анны
+                </div>
+              </div>
+              <div class="product-card__item-trand">
+                <div class="product-card__item-trand__inner">
+                  <img src="./assets/img/trand.svg" alt="img">
+                  <span>
+                    тренд тик тока
+                  </span>
+                </div>
+              </div>
+              <img src="./assets/img/p1.png" alt="img">
+            </div>
+            <div class="product-card__item-info">
+              <div class="product-card__item-body">
+                <div class="product-card__item-body__head">
+                  <div class="product-card__item-name">
+                    <div class="product-card__item-name__brand">
+                      HAUS LABS
+                      BY LADY GAGA
+                    </div>
+                    <div class="product-card__item-name__name">
+                      PHD HYBRID
+                      PLUMPING LIP GLAZE DUO
+                    </div>
+                    <div class="product-card__item-name__color">
+                      <strong>OTTEHOK</strong> HONEY
+                      SHIMMER & PERSIMMONE
+                    </div>
+                  </div>
+                  <div class="product-card__item-price">
+                    от 4 900 ₽
+                  </div>
+                </div>
+  
+                <div class="product-card__item-colors">
+                  <div class="product-card__item-colors__items">
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                    <div class="product-card__item-color__item">
+                      <img src="./assets/img/col.png" alt="img">
+                    </div>
+                  </div>
+                  <div class="product-card__item-colors__count">
+                    +2
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__item-footer">
+                <div class="product-card__item-cat">
+                  Бальзам для губ
+                </div>
+                <a href="javascript:void(0)" class="product-item__addCart">
+                  в корзину
+                </a>
+                <a href="javascript:void(0)" class="product-item__detail">
+                  подробнее
+                </a>
+                <div class="product-item__availibility">
+                  <span>Наличие: </span>3 шт в Москве
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
   <footer>
     <div class="overlay"></div>
-    <div class="modal" data-modal="share-wishlist">
-      <div class="modal-inner">
-        <div class="modal-close">
-          <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1.11719L10.3092 12.879" stroke="black"></path>
-            <path d="M1.1543 12.7617L10.4635 0.99994" stroke="black"></path>
-          </svg>
-        </div>
-        <div class="modal-content">
-          <div class="modal-title pink">
-            поделиться вишлистом
-          </div>
-          <form class="black-inputs share-wishlist">
-            <div class="input-wrap">
-              <label for="name">С кем делимся?</label>
-              <input type="text" name="name" id="name" placeholder="Имя">
-            </div>
-            <div class="input-wrap">
-              <label for="person">Как делимся? </label>
-            </div>
-            <div class="input-row">
-              <div class="input-wrap">
-                <input type="radio" id="test1" name="radio-group" checked="">
-                <label for="test1">отправить по почте</label>
-              </div>
-              <div class="input-wrap">
-                <input type="radio" id="test2" name="radio-group">
-                <label for="test2">отправить в What’s app</label>
-              </div>
-            </div>
-            <div class="radio-tab__content">
-              <div class="content content1">
-                <div class="input-wrap">
-                  <label for="email">Почта</label>
-                  <input type="email" id="email" pattern=".+@example\.com" size="30" placeholder="support@xbeautyconcierge.ru">
-                </div>
-              </div>
-              <div class="content content2 active">
-                <div class="input-wrap">
-                  <label for="phone">Номер телефона</label>
-                  <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 (999) 990-60-96">
-                </div>
-              </div>
-            </div>
-            <div class="checkout-product__items wishlist-product__items">
-              <div class="checkout-product__item">
-                <div class="custom-checkbox__pink">
-                  <input id="availibility1" name="availibility1" type="checkbox" value="yes">
-                  <label for="availibility1">
-                    <div class="checkout-product__item-left">
-                      <div class="checkout-product__item-image wish-product">
-                        <img src="./assets/img/checkout-i.png" alt="img">
-                      </div>
-                      <div class="checkout-product__item-info">
-                        <div class="checkout-product__item-name">
-                          HERMES
-                          ROSE HERMES SILKY BLUSH POWDER REFILL
-                        </div>
-                        <div class="checkout-product__item-description">
-                          OTTEHOK HONEY
-                          SHIMMER &amp; PERSIMMONE
-                        </div>
-                      </div>
-                    </div>
-                    <div class="checkout-product__item-right">
-                      <div class="checkout-product__item-price">
-                        4 900 ₽
-                      </div>
-                      <div class="checkout-item__char">
-                        <div class="checkout-item__char-name">
-                          50 мл
-                        </div>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-
-              </div>
-              <div class="checkout-product__item">
-                <div class="custom-checkbox__pink">
-                  <input id="availibility2" name="availibility2" type="checkbox" value="yes">
-                  <label for="availibility2">
-                    <div class="checkout-product__item-left">
-                      <div class="checkout-product__item-image wish-product">
-                        <img src="./assets/img/checkout-i.png" alt="img">
-                      </div>
-                      <div class="checkout-product__item-info">
-                        <div class="checkout-product__item-name">
-                          HERMES
-                          ROSE HERMES SILKY BLUSH POWDER REFILL
-                        </div>
-                        <div class="checkout-product__item-description">
-                          OTTEHOK HONEY
-                          SHIMMER &amp; PERSIMMONE
-                        </div>
-                      </div>
-                    </div>
-                    <div class="checkout-product__item-right">
-                      <div class="checkout-product__item-price">
-                        4 900 ₽
-                      </div>
-                      <div class="checkout-item__char">
-                        <div class="checkout-item__char-name">
-                          50 мл
-                        </div>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-
-              </div>
-              <div class="checkout-product__item">
-                <div class="custom-checkbox__pink">
-                  <input id="availibility3" name="availibility3" type="checkbox" value="yes">
-                  <label for="availibility3">
-                    <div class="checkout-product__item-left">
-                      <div class="checkout-product__item-image wish-product">
-                        <img src="./assets/img/checkout-i.png" alt="img">
-                      </div>
-                      <div class="checkout-product__item-info">
-                        <div class="checkout-product__item-name">
-                          HERMES
-                          ROSE HERMES SILKY BLUSH POWDER REFILL
-                        </div>
-                        <div class="checkout-product__item-description">
-                          OTTEHOK HONEY
-                          SHIMMER &amp; PERSIMMONE
-                        </div>
-                      </div>
-                    </div>
-                    <div class="checkout-product__item-right">
-                      <div class="checkout-product__item-price">
-                        4 900 ₽
-                      </div>
-                      <div class="checkout-item__char">
-                        <div class="checkout-item__char-name">
-                          50 мл
-                        </div>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-
-              </div>
-            </div>
-            <input type="submit" value="отправить вишлист" class="submit">
-          </form>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="footer-head">
         <div class="footer-address">
@@ -1195,7 +1038,6 @@
     </div>
   </footer>
   <script src="./assets/js/splide.min.js"></script>
-  <script src="./assets/js/dashboard/script.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 

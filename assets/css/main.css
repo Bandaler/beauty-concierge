@@ -629,7 +629,7 @@ nav {
           -webkit-box-orient: vertical;
           line-clamp: 8;
           box-orient: vertical;
-          
+
 
           & .product-card__item-name__brand {
             font-weight: 700;
@@ -829,6 +829,14 @@ nav {
           font-size: 14px;
         }
       }
+
+      .pink-mode__btn {
+        border-radius: 1px;
+        border: 1px solid #FF5596;
+        background-color: #FF5596;
+      }
+      
+
       & .product-item__detail {
         color: #000;
         font-size: 25px;
@@ -1670,6 +1678,7 @@ footer {
   max-height: 0;
   overflow: hidden;
   transition: all .3s;
+
   & .filters-form__items {
     display: flex;
     flex-direction: column;
@@ -1839,30 +1848,30 @@ footer {
         transition: all .3s;
         padding-top: 7px;
 
-              /* Chrome, Safari, Edge */
-      &::-webkit-scrollbar {
-        width: 2px;
-        /* вертикальный скроллбар */
-        height: 2px;
-        /* горизонтальный скроллбар */
-        background-color: #FF5596;
-        /* цвет дорожки */
-      }
+        /* Chrome, Safari, Edge */
+        &::-webkit-scrollbar {
+          width: 2px;
+          /* вертикальный скроллбар */
+          height: 2px;
+          /* горизонтальный скроллбар */
+          background-color: #FF5596;
+          /* цвет дорожки */
+        }
 
-      &::-webkit-scrollbar-track {
-        background-color: #FF5596;
-        /* дорожка (фон под ползунком) */
-      }
+        &::-webkit-scrollbar-track {
+          background-color: #FF5596;
+          /* дорожка (фон под ползунком) */
+        }
 
-      &::-webkit-scrollbar-thumb {
-        background-color: #000;
-        /* цвет ползунка */
-        border-radius: 2px;
-        min-height: 4px;
-        min-width: 4px;
-        max-height: 4px;
-        max-width: 4px;
-      }
+        &::-webkit-scrollbar-thumb {
+          background-color: #000;
+          /* цвет ползунка */
+          border-radius: 2px;
+          min-height: 4px;
+          min-width: 4px;
+          max-height: 4px;
+          max-width: 4px;
+        }
       }
     }
   }
@@ -1873,7 +1882,6 @@ footer {
   overflow: visible;
   transition: all .3s;
 }
-
 
 
 
