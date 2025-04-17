@@ -1877,6 +1877,10 @@ footer {
   }
 }
 
+.no-margin {
+  margin: 0;
+}
+
 .filters-form.active {
   max-height: 400px;
   overflow: visible;
