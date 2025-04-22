@@ -1,0 +1,11 @@
+.single-gift__image {
+  max-height: 487px;
+  @media(max-width: 600px) {
+    height: 287px;
+  }
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

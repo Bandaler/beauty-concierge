@@ -835,7 +835,7 @@ nav {
         border: 1px solid #FF5596;
         background-color: #FF5596;
       }
-      
+
 
       & .product-item__detail {
         color: #000;
@@ -1727,6 +1727,34 @@ footer {
               font-size: 14px;
             }
           }
+
+          & a.active {
+            color: #FF5596;
+          }
+
+          & .input-wrap input[type="checkbox"] {
+            display: none;
+          }
+          
+          & .input-wrap label {
+            color: #000;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 90%;
+            cursor: pointer;
+
+            @media(max-width: 600px) {
+              font-size: 14px;
+            }
+          }
+          
+          & .input-wrap input[type="checkbox"]:checked + label {
+   
+            color: #FF5596;
+       
+          }
+
         }
 
         & .filter-price__range {
@@ -1887,6 +1915,20 @@ footer {
   transition: all .3s;
 }
 
+.section__title {
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media(max-width: 600px) {
+    font-size: 20px;
+  }
+}
 
 
 
