@@ -151,3 +151,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.search-form__modal');
+    const searchButtons = document.querySelectorAll('.button-search');
+    const closeBtn = document.querySelector('.close-search');
+  
+    // Открытие модалки
+    searchButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation(); // чтобы не сработало закрытие при клике
+        modal.classList.add('active');
+      });
+    });
+  
+    // Закрытие по кнопке закрытия
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  
+    // Закрытие по клику вне модалки
+    document.addEventListener('click', (e) => {
+      if (
+        modal.classList.contains('active') &&
+        !modal.contains(e.target) &&
+        !e.target.classList.contains('button-search')
+      ) {
+        modal.classList.remove('active');
+      }
+    });
+  });
+  
