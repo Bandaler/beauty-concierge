@@ -36,5 +36,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   radios.forEach(radio => radio.addEventListener("change", updateTabs));
-  updateTabs(); // Запускаем при загрузке страницы
+  updateTabs(); 
 });

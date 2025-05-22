@@ -765,13 +765,102 @@
           <div class="checkout-form__title" style="margin-top: 20px;">
             Способ доставки
           </div>
-          <div class="input-wrap">
+          <!-- Поиск городов -->
+          <div class="input-wrap city-search">
             <label for="city">Город</label>
             <input type="search" name="city" id="city" placeholder="Город">
+            <div class="search-result__city-items" id="search-list">
+              <div class="search-result__city-item">
+                Москва
+              </div>
+              <div class="search-result__city-item">
+                Анапа
+              </div>
+              <div class="search-result__city-item">
+                Екатеринбург
+              </div>
+            </div>
             <div class="subinput">Россия, г. Москва</div>
           </div>
+          <style>
+            .city-search {
+              position: relative;
+
+              .search-result__city-items {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 74%;
+                width: 100%;
+                z-index: 2;
+                background-color: #fff;
+                border: 1px solid #FF5596;
+                padding: 8px;
+                flex-direction: column;
+                gap: 6px;
+
+                & .search-result__city-item {
+                  cursor: pointer;
+                }
+              }
+
+              .search-result__city-items.active {
+                display: flex;
+              }
+            }
+          </style>
+          <script>
+            // Получаем элементы
+            const searchInput = document.querySelector("#city");
+            const list = document.querySelector("#search-list");
+            const cityItems = list.querySelectorAll(".search-result__city-item");
+            const subinput = document.querySelector(".subinput");
+            const inputWrap = document.querySelector(".city-search");
+
+            // Обработка ввода текста
+            searchInput.addEventListener("input", function () {
+              const searchTerm = this.value.toLowerCase();
+              let hasMatch = false;
+
+              cityItems.forEach(item => {
+                const city = item.textContent.toLowerCase();
+                if (city.includes(searchTerm)) {
+                  item.style.display = "block";
+                  hasMatch = true;
+                } else {
+                  item.style.display = "none";
+                }
+              });
+
+              // Если есть совпадения — показываем список
+              if (searchTerm && hasMatch) {
+                list.classList.add("active");
+              } else {
+                list.classList.remove("active");
+              }
+            });
+
+            // Клик по городу из списка
+            cityItems.forEach(item => {
+              item.addEventListener("click", function () {
+                const selectedCity = this.textContent.trim();
+                searchInput.value = selectedCity;
+                subinput.textContent = `Россия, г. ${selectedCity}`;
+                list.classList.remove("active");
+              });
+            });
+
+            // Клик вне блока поиска — скрытие списка
+            document.addEventListener("click", function (event) {
+              if (!inputWrap.contains(event.target)) {
+                list.classList.remove("active");
+              }
+            });
+
+          </script>
+          <!-- Поиск городов конец -->
           <div class="input-wrap">
-            <input type="radio" name="delivery" id="sdek" checked/>
+            <input type="radio" name="delivery" id="sdek" checked />
             <label for="sdek">До пункта выдачи СДЭК <span>от 2 дней, от 435,5 р.</span></label>
           </div>
           <div class="input-wrap">
@@ -808,10 +897,10 @@
                 Пункт получения
               </p>
               <p class="export-point__text">
-                Самовывоз<br/>
-                Адрес: м. Славянский бульвар, ул. Нежинская<br/>
-                Время работы: ежедневно с 10:00 до 20:00<br/>
-                Телефон: +7 (999) 990-60-96<br/>
+                Самовывоз<br />
+                Адрес: м. Славянский бульвар, ул. Нежинская<br />
+                Время работы: ежедневно с 10:00 до 20:00<br />
+                Телефон: +7 (999) 990-60-96<br />
               </p>
             </div>
             <div class="export-point" data-container="courier">
@@ -824,27 +913,27 @@
               </div>
               <div class="input-wrap">
                 <label for="home">Номер дома</label>
-                <input type="text" name="home" id="home" >
+                <input type="text" name="home" id="home">
               </div>
               <div class="input-wrap">
                 <label for="liter">Корпус/строение/литера (если есть)</label>
-                <input type="text" name="liter" id="liter" >
+                <input type="text" name="liter" id="liter">
               </div>
               <div class="input-wrap">
                 <label for="entrance">Подъезд </label>
-                <input type="text" name="entrance" id="entrance" >
+                <input type="text" name="entrance" id="entrance">
               </div>
               <div class="input-wrap">
                 <label for="intercom">Домофон </label>
-                <input type="text" name="intercom" id="intercom" >
+                <input type="text" name="intercom" id="intercom">
               </div>
               <div class="input-wrap">
                 <label for="floor">Этаж </label>
-                <input type="text" name="floor" id="floor" >
+                <input type="text" name="floor" id="floor">
               </div>
               <div class="input-wrap">
                 <label for="apartment">Квартира </label>
-                <input type="text" name="apartment" id="apartment" >
+                <input type="text" name="apartment" id="apartment">
               </div>
               <div class="form-disclaimer">
                 При доставке по Москве укажите
@@ -853,15 +942,15 @@
               </div>
               <div class="input-wrap">
                 <label for="date">Дата </label>
-                <input type="text" name="date" id="date" >
+                <input type="text" name="date" id="date">
               </div>
               <div class="input-wrap">
                 <label for="time">Время </label>
-                <input type="text" name="time" id="time" >
+                <input type="text" name="time" id="time">
               </div>
               <div class="input-wrap">
                 <label for="comment">Комментарий к доставке </label>
-                <input type="text" name="comment" id="comment" >
+                <input type="text" name="comment" id="comment">
               </div>
             </div>
             <div class="export-point" data-container="door">
@@ -874,27 +963,27 @@
               </div>
               <div class="input-wrap">
                 <label for="home">Номер дома</label>
-                <input type="text" name="home" id="home" >
+                <input type="text" name="home" id="home">
               </div>
               <div class="input-wrap">
                 <label for="liter">Корпус/строение/литера (если есть)</label>
-                <input type="text" name="liter" id="liter" >
+                <input type="text" name="liter" id="liter">
               </div>
               <div class="input-wrap">
                 <label for="entrance">Подъезд </label>
-                <input type="text" name="entrance" id="entrance" >
+                <input type="text" name="entrance" id="entrance">
               </div>
               <div class="input-wrap">
                 <label for="intercom">Домофон </label>
-                <input type="text" name="intercom" id="intercom" >
+                <input type="text" name="intercom" id="intercom">
               </div>
               <div class="input-wrap">
                 <label for="floor">Этаж </label>
-                <input type="text" name="floor" id="floor" >
+                <input type="text" name="floor" id="floor">
               </div>
               <div class="input-wrap">
                 <label for="apartment">Квартира </label>
-                <input type="text" name="apartment" id="apartment" >
+                <input type="text" name="apartment" id="apartment">
               </div>
             </div>
             <div class="export-point" data-container="yandex">
@@ -902,9 +991,10 @@
                 Доставка яндекс курьером по москве и за Мкад
               </div>
               <div class="form-disclaimer" style="color: #FF5596;">
-                При выборе опции доставки Яндекс такси наш менеджер свяжется с Вами в What’s App и согласует тариф доставки.   
+                При выборе опции доставки Яндекс такси наш менеджер свяжется с Вами в What’s App и согласует тариф
+                доставки.   
                 Данный вид доставки плачивается отдельно Вами при получении по тарифу службы Яндекс.
-                
+
                 Введите, пожалуйста, ниже Ваши данные.
               </div>
               <div class="input-wrap">
@@ -913,27 +1003,27 @@
               </div>
               <div class="input-wrap">
                 <label for="home">Номер дома</label>
-                <input type="text" name="home" id="home" >
+                <input type="text" name="home" id="home">
               </div>
               <div class="input-wrap">
                 <label for="liter">Корпус/строение/литера (если есть)</label>
-                <input type="text" name="liter" id="liter" >
+                <input type="text" name="liter" id="liter">
               </div>
               <div class="input-wrap">
                 <label for="entrance">Подъезд </label>
-                <input type="text" name="entrance" id="entrance" >
+                <input type="text" name="entrance" id="entrance">
               </div>
               <div class="input-wrap">
                 <label for="intercom">Домофон </label>
-                <input type="text" name="intercom" id="intercom" >
+                <input type="text" name="intercom" id="intercom">
               </div>
               <div class="input-wrap">
                 <label for="floor">Этаж </label>
-                <input type="text" name="floor" id="floor" >
+                <input type="text" name="floor" id="floor">
               </div>
               <div class="input-wrap">
                 <label for="apartment">Квартира </label>
-                <input type="text" name="apartment" id="apartment" >
+                <input type="text" name="apartment" id="apartment">
               </div>
             </div>
           </div>
